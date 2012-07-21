@@ -56,19 +56,12 @@ if(hasArg('save')){
 } else {
   var config = require('config')
   // not running from command line. Just load in the config.
-  if(!config.environment){
-    // figure out what environment we *are* in
-    if(process.env.APP_CONFIG){
-      // in heroku or somewhere that we've set an app config.
-      var config = JSON.parse(decodeURIComponent(process.env.APP_CONFIG))
-      console.info("Config Loaded",config)
-      module.exports = config
-    } else {
-      console.error('Unable to load config. Exiting.')
-      process.exit(0)
-    }
-  } else {
-    // we've loaded the config. just return it.
+  // figure out what environment we are in
+  if(process.env.APP_CONFIG){
+    // in heroku or somewhere that we've set an app config.
+    var config = JSON.parse(decodeURIComponent(process.env.APP_CONFIG))
+    console.info("Config Loaded",config)
     module.exports = config
   }
+  module.exports = config
 }
