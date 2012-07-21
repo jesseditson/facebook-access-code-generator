@@ -22,8 +22,8 @@ var fromCwd = function(command){
 
 // Save heroku method
 var saveHeroku = function(){
-  var moveRuntime = "mv config/runtime.json _runtime.json && mv heroku.json runtime.json",
-      unMoveRuntime = "mv runtime.json heroku.json && mv _runtime.json config/runtime.json"
+  var moveRuntime = "mv config/runtime.json _runtime.json && mv config/heroku.json config/runtime.json",
+      unMoveRuntime = "mv config/runtime.json config/heroku.json && mv _runtime.json config/runtime.json"
   exec(fromCwd(moveRuntime),function(err,stdout,stderr){
     if(err){
       console.error("Error moving runtime: ",err)
