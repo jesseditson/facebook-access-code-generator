@@ -44,6 +44,8 @@ Here's what that would look like:
         
         node ./configLoader.js save heroku
 
+Everything else is compatible with a normal cedar heroku app.
+
 ####Bonus:
 
 - If you're behind a proxy, you can add a `port` key to your runtime.json to set the port it'll run on.
