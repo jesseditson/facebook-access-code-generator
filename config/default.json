@@ -1,0 +1,13 @@
+{
+  "port" : 80,
+  "sessionSecret" : "aging daddies",
+  "sessionKey" : "fbauthgenerator.sid",
+  "facebook" : {
+    "scope" : "user_status,offline_access",
+    "appid" : "",
+    "appsecret" : "",
+    "options" : {
+      "timeout" : 10000
+    }
+  }
+}

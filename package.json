@@ -1,0 +1,21 @@
+{
+  "author": "Jesse Ditson <jesse.ditson@gmail.com>",
+  "name": "facebook-access-code-generator",
+  "description": "quick and dirty little server for generating fb access code tokens\"",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jesseditson/facebook-access-code-generator.git"
+  },
+  "main": "access_code_generator.js",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "config": "~0.4.15",
+    "everyauth": "~0.2.32",
+    "express": "2.x.x"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
