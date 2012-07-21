@@ -1,5 +1,5 @@
 var express = require('express'),
-    config = require('config'),
+    config = require('./configLoader'),
     everyauth = require('everyauth')
 
 var app = express.createServer()

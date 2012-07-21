@@ -21,6 +21,29 @@
 
 5. Visit your.app.url in a browser
 
+####Running on Heroku:
+
+Heroku doesn't like the runtime.json setup of config, so we'll need to save it to an environment variable.
+
+First, create a file called `heroku.json` in the config folder with the info you'd like to run on heroku. Most likely this will be the same as your `package.json`.
+
+Then, to update the config, run: 
+
+        node ./configLoader.js save heroku
+
+To make things easier, you probably want to add a git post-commit hook to do this for you when you commit:
+
+Here's what that would look like:
+
+        #!/bin/bash
+        
+        if [ $GIT_DIR ]
+          then
+          cd $GIT_DIR/..
+        fi
+        
+        node ./configLoader.js save heroku
+
 ####Bonus:
 
 - If you're behind a proxy, you can add a `port` key to your runtime.json to set the port it'll run on.
